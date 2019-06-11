@@ -8,7 +8,7 @@ Feature: Coffee machine serves coffee
     Given There's a coffee machine with 10 doses of coffee in it
     And I as a customer deposit $10 inside
     When I press the coffee button
-    Then I should be served a coffee
+    Then I should be served coffee
 
   Scenario: Coffee machine can make espresso
     Given There's a coffee machine with 10 doses of coffee in it
