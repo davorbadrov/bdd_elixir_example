@@ -1,24 +1,13 @@
 defmodule BddElixir.CoffeeMachine do
   @moduledoc """
   Provides basic functionality of coffee machines where you can:
-  - put coffee in it,
+  - put coffee in the machine,
   - deposit money,
   - order coffee, and
-  - coffee (if it's ready).
+  - take the coffee (if it's ready).
   """
   alias __MODULE__
   alias BddElixir.Coffee
-
-  # how much coffee is in the machine
-  # defstruct coffee_amount: 0,
-  #           # how much is a coffee
-  #           coffee_price: 1,
-  #           # how much money is in the machine (after transactions)
-  #           money_amount: 0,
-  #           # how much money has been deposited
-  #           money_amount_deposited: 0,
-  #           # is the coffee ready
-  #           coffee_ready: nil
 
   use TypedStruct
 
