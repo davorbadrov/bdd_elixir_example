@@ -1,21 +1,12 @@
 # BddElixir
 
-**TODO: Add description**
+An example of how to use BDD in Elixir using the [cabbage](https://github.com/cabbage-ex/cabbage) library.
+It only has a couple of scenarios demoing the feature.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `bdd_elixir` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:bdd_elixir, "~> 0.1.0"}
-  ]
-end
+```sh
+mix deps.get
+mix test # or iex -S mix to play around
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/bdd_elixir](https://hexdocs.pm/bdd_elixir).
 
