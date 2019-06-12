@@ -38,8 +38,16 @@ defmodule MakeCoffeeFeatureTest do
     coffee_machine: coffee_machine
   } do
     coffee_type = parse_coffee_type(coffee_type_string)
-    {coffee, _coffee_machine} = CoffeeMachine.take_coffee!(coffee_machine)
+
+    {coffee, coffee_machine} = CoffeeMachine.take_coffee!(coffee_machine)
+
     assert coffee == %Coffee{type: coffee_type}
+
+    {:ok, %{coffee_machine: coffee_machine}}
+  end
+
+  defand ~r/^the coffee machine should be empty$/, _vars, %{coffee_machine: coffee_machine} do
+    assert coffee_machine.coffee_ready == nil
   end
 
   defp parse_integer(value) do

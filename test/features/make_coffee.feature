@@ -15,3 +15,10 @@ Feature: Coffee machine serves coffee
     And I as a customer deposit $10 inside
     When I press the espresso button
     Then I should be served espresso
+
+  Scenario: Coffee machine must be empty after the coffe is taken out of it
+    Given There's a coffee machine with 10 doses of coffee in it
+    And I as a customer deposit $10 inside
+    When I press the espresso button
+    Then I should be served espresso
+    And the coffee machine should be empty
